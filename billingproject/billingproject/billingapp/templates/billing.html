@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Billing page</title>
+  <style>
+    body{
+    font-family: Arial;
+    background:#f5f5f5;
+}
+
+/* common page box */
+.page{
+    width:750px;
+    margin:30px auto;
+    border:2px solid black;
+    padding:25px;
+    background:white;
+}
+
+.title{
+    text-align:center;
+    font-weight:bold;
+    margin-bottom:25px;
+}
+
+/* rows */
+.row{
+    display:flex;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.row label{
+    width:150px;
+}
+
+.row input{
+    padding:6px;
+    width:200px;
+}
+
+/* bill inputs */
+.bill-box{
+    margin-right:150px;
+}
+
+.bill-row{
+    display:flex;
+    gap: 20px;
+    margin-bottom:10px;
+}
+
+button{
+    padding:6px 12px;
+}
+.add-btn {
+    margin-bottom: 10px;
+    padding: 6px 12px;
+}
+
+/* line */
+hr{
+    margin:30px 0;
+}
+
+/* bottom layout */
+.bottom{
+    display:flex;
+    justify-content:space-between;
+}
+
+.deno input{
+    width:80px;
+    padding:5px;
+    margin:5px;
+}
+.deno-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.summary{
+    text-align:right;
+    margin-top:20px;
+}
+
+.balance{
+    text-align:right;
+    margin-top:40px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+th,td{
+    border:1px solid black;
+    padding:8px;
+    text-align:center;
+}
+</style>
+</head>
+<body>
+  <!-- ================= PAGE 1 ================= -->
+
+<div class="page">
+
+<div class="title">Billing Page</div>
+
+<div class="row">
+<label>Customer Email :</label>
+<input placeholder="Email ID">
+</div>
+
+<div class="row">
+<label>Bill section</label>
+</div>
+
+<div class="bill-box">
+
+<button class="add-btn">Add New</button>
+
+<div class="bill-row">
+<input type="text" placeholder="Product Id">
+<input type="number" placeholder="Quantity">
+</div>
+
+<div class="bill-row">
+<input type="text" placeholder="Product Id">
+<input type="number" placeholder="Quantity">
+</div>
+
+<div class="bill-row">
+<input type="text" placeholder="Product Id">
+<input type="number" placeholder="Quantity">
+</div>
+
+</div>
+
+<hr>
+
+<div class="deno">
+<h3>Denominations</h3>
+<div class="deno-row">
+    <label style="width: 30px;">500</label>
+    <input type="number" placeholder="count">
+</div>
+<div class="deno-row">
+    <label style="width: 30px;">50</label>
+    <input type="number" placeholder="count">
+</div>
+<div class="deno-row">
+    <label style="width: 30px;">20</label>
+    <input type="number" placeholder="count">
+</div>
+<div class="deno-row">
+    <label style="width: 30px;">10</label>
+    <input type="number" placeholder="count">
+</div>
+<div class="deno-row">
+    <label style="width: 30px;">5</label>
+    <input type="number" placeholder="count">
+</div>
+<div class="deno-row">
+    <label style="width: 30px;">2</label>
+    <input type="number" placeholder="count">
+</div>
+<div class="deno-row">
+    <label style="width: 30px;">1</label>
+    <input type="number" placeholder="count">
+</div>
+</div><br>
+
+<div>
+<div class="row">
+<label>Cash paid by customer :</label>
+<input type="number" placeholder="Amount">
+</div>
+
+<div style="text-align:right;margin-top:40px;">
+<button>Cancel</button>
+<button style="color:green;">Generate Bill</button>
+</div>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ================= PAGE 2 ================= -->
+
+<div class="page">
+
+<div class="title">Billing Page</div><br>
+
+<p><b>Customer Email:</b> Email collected in the previous page</p><br>
+
+<div class="row">
+<label>Bill section</label>
+</div>
+
+<table>
+<tr>
+<th>Product ID</th>
+<th>Unit Price</th>
+<th>Quantity</th>
+<th>Purchase Price</th>
+<th>Tax % for item</th>
+<th>Tax payable for item</th>
+<th>Total price for item</th>
+</tr>
+
+<tr>
+<td>Product Id</td>
+<td>Unit Price</td>
+<td>Quantity</td>
+<td>Purchase price</td>
+<td>Tax% for item</td>
+<td>Tax payable for item</td>
+<td>Total price for item</td>
+</tr>
+
+<tr>
+<td>Product Id</td>
+<td>Unit price</td>
+<td>Quantity</td>
+<td>Purchase price</td>
+<td>Tax% for item</td>
+<td>Tax payable for item</td>
+<td>Total price for item</td>
+</tr>
+
+</table><br>
+
+<div class="summary">
+Total price without tax: 2102.00<br><br>
+Total tax payable: 255.60<br><br>
+Net price of the purchased item: 2357.60<br><br>
+Rounded down value: 2357.00<br><br>
+Balance payable to the customer: 643.00
+</div>
+
+<hr>
+
+<div class="balance">
+<b>Balance Denomination:</b><br><br>
+500 : 1<br><br>
+50 : 2<br><br>
+20 : 2<br><br>
+2 : 1<br><br>
+1 : 1
+</div>
+
+</div>
+ 
+</body>
+</html>
